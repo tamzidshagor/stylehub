@@ -1151,7 +1151,8 @@ const ProductsPage = () => {
 };
 
 const ProductDetailPage = () => {
-  const { pageData, addToCart, showToast, navigateTo, products, reviews } = useApp();
+  // ✅ এখন (reviews সরিয়ে দিন):
+const { pageData, addToCart, showToast, navigateTo, products } = useApp();
   const product = products.find((p) => p.id === pageData?.productId);
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedSize, setSelectedSize] = useState("");
